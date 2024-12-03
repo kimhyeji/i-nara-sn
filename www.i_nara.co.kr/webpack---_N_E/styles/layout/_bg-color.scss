@@ -1,0 +1,111 @@
+.bg-color {
+  &--violet {
+    background-color: var(--bg-violet);
+  }
+  &--orange {
+    background-color: var(--bg-orange);
+  }
+  &--lightorange {
+    background-color: var(--bg-light-orange);
+  }
+  &--green {
+    background-color: var(--bg-green);
+  }
+  &--light-green {
+    background-color: var(--bg-light-green);
+  }
+  &--baby-green {
+    background-color: var(--bg-baby-green);
+  }
+  &--lightblue {
+    background-color: var(--bg-light-blue);
+  }
+  &--skyblue {
+    background-color: var(--bg-skyblue);
+  }
+  &--blue {
+    background-color: var(--bg-blue);
+  }
+  &--sky-blue {
+    background-color: var(--bg-sky-blue);
+  }
+  &--blue-green {
+    background-color: var(--bg-blue-green);
+  }
+  &--baby-blue {
+    background-color: var(--bg-baby-blue);
+  }
+  &--darken-blue {
+    background-color: var(--bg-darken-blue);
+  }
+  &--red {
+    background-color: var(--bg-red);
+  }
+  &--grey {
+    background-color: var(--18-grey-text);
+  }
+  &--yellow {
+    background-color: var(--01-yuppy-pastel);
+  }
+  &--beige-yellow {
+    background-color: var(--bg-beige-yellow);
+  }
+  &--light-yellow {
+    background-color: var(--bg-light-yellow);
+  }
+  &--darken-yellow {
+    background-color: var(--17-darken-yellow);
+  }
+  &--pink {
+    background-color: var(--bg-pink);
+  }
+  &--soft-pink {
+    background-color: var(--bg-soft-pink);
+  }
+  &--lightpink {
+    background-color: var(--bg-light-pink);
+  }
+  &--baby-pink {
+    background-color: var(--bg-baby-pink);
+  }
+}
+
+body.bg--gray {
+  .container {
+    background-color: var(--14-grey-bg-1);
+  }
+  .header {
+    &__inner {
+      background-color: var(--14-grey-bg-1);
+    }
+  }
+  .footer {
+    background-color: var(--05-white);
+    &__cover {
+      background-color: var(--14-grey-bg-1);
+    }
+    .sns__item {
+      background-color: var(--14-grey-bg-1);
+    }
+  }
+}
+
+body.bg--yellow {
+  .container {
+    background-color: var(--bg-light-yellow2);
+  }
+  .header {
+    &__inner {
+      background-color: var(--bg-light-yellow2);
+    }
+  }
+  .footer {
+    background-color: var(--05-white);
+    &__cover {
+      background-color: var(--14-grey-bg-1);
+    }
+    .sns__item {
+      background-color: var(--14-grey-bg-1);
+    }
+  }
+}

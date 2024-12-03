@@ -1,0 +1,127 @@
+// 모바일 (1023px 이하)
+@mixin only-mobile {
+  @media (max-width:calc(#{$tabletMaxWidth} - 1px)) {
+    @content;
+  }
+}
+
+// 모바일 최소 높이 (너비 1023px 이하, 높이 759px 이하)
+@mixin min-mobile-height {
+  @media (max-width:calc(#{$tabletMaxWidth} - 1px)) and (max-height:#{$mobileMinHeight}) {
+    @content;
+  }
+}
+
+// 메인 데스크탑 최소 높이 (너비 1024px 이상, 높이 1023px 이하)
+@mixin min-main-height {
+  @media (min-width: #{$tabletMaxWidth}) and (max-height:#{$minMainHeight}) {
+    @content;
+  }
+}
+
+// 테블릿 (768px 이상)
+@mixin tablet {
+  @media (min-width: #{$mobileMaxWidth}) {
+    @content;
+  }
+}
+
+// 데스크탑 작은 사이즈 (너비 1024px ~ 1339px)
+@mixin pc-small {
+  @media (min-width: #{$tabletMaxWidth}) and (max-width: calc(#{$pcWidth} - 1px)) {
+    @content;
+  }
+}
+
+// 데스크탑 큰 사이즈 (1920px 이상)
+@mixin pc-big {
+  @media (min-width: #{$maxWidth}) {
+    @content;
+  }
+}
+
+// 데스크탑 중간 사이즈 (1440px 이상)
+@mixin pc-medium {
+  @media (min-width: #{$pcWidth}) {
+    @content;
+  }
+}
+
+// 데스크탑 (1024px 이상)
+@mixin pc {
+  @media (min-width: #{$tabletMaxWidth}) {
+    @content;
+  }
+}
+
+// ios 적용
+@mixin ios {
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      @content;
+    }
+  }
+}
+
+// 약관 가로 스크롤
+@mixin terms-horizon-scroll {
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    height: 9px;
+  }
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-track {
+    background-clip: padding-box;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--grey-bg-2);
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--14-grey-bg-1);
+  }
+}
+
+// 약관 세로 스크롤
+@mixin terms-vertical-scroll {
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-track {
+    background-clip: padding-box;
+    border-top: 12px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-right: 5px solid transparent;
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--grey-bg-2);
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--14-grey-bg-1);
+  }
+}
+
+@mixin landscape {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media (orientation: landscape) and (max-width: #{$tabletWidth}) {
+    @content;
+  }
+}

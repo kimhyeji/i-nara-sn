@@ -1,0 +1,41 @@
+.banner {
+  .title {
+    &__title {
+      font-size: 24rem;
+      font-weight: bold;
+      line-height: 1.5;
+      letter-spacing: -0.3px;
+      @include pc {
+        font-size: 40rem;
+      }
+    }
+  }
+  .btn {
+    position: relative;
+    margin-top: 20rem;
+    text-align: center;
+    z-index: 2;
+    @include pc {
+      margin-top: 32rem;
+    }
+    &__link {
+      width: auto !important;
+      display: inline-block !important;
+      padding: 15rem 48rem !important;
+      letter-spacing: -0.3px !important;
+      @include pc {
+        padding: 17rem 60rem 19rem !important;
+      }
+    }
+  }
+  &__img {
+    &-wrap {
+      position: relative;
+      z-index: 1;
+      margin-top: 30rem;
+      @include pc {
+        margin: auto;
+      }
+    }
+  }
+}

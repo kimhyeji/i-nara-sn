@@ -1,0 +1,297 @@
+.gnb {
+  position: fixed;
+  top: -100vh;
+  right: 0;
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: var(--05-white);
+  z-index: 10001;
+  opacity: 0;
+  box-sizing: border-box;
+  @include pc {
+    top: 0;
+    right: -100%;
+    width: 580px;
+  }
+  > * {
+    opacity: 0;
+  }
+  .hamburger {
+    position: absolute;
+    top: 18px;
+    right: 15.5px;
+    @include pc {
+      top: 37px;
+      right: 60px;
+    }
+    &__item {
+      background-color: var(--30-kids-black);
+    }
+    .top {
+      top: 50%;
+      transform: rotate(135deg);
+    }
+    .middle {
+      opacity: 0;
+    }
+    .bottom {
+      top: 50%;
+      transform: rotate(-135deg);
+    }
+  }
+  &-user {
+    display: flex;
+    align-items: center;
+    padding: 72px 32px 24px;
+    background-color: var(--14-grey-bg-1);
+    @include pc {
+      padding: 108px 80px 32px 60px;
+    }
+    &__title {
+      width: calc(100% - 82px);
+      @include pc {
+        width: calc(100% - 96px);
+      }
+    }
+    &__state {
+      margin-top: 6px;
+      font-size: 14px;
+      color: var(--06-gray);
+      @include pc {
+        margin-top: 11px;
+        font-size: 18px;
+      }
+    }
+    .btn {
+      margin-top: 0;
+      &__link {
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--30-kids-black);
+        @include pc {
+          font-size: 28px;
+          &:hover {
+            .btn__icon {
+              &--hover {
+                display: inline-block;
+              }
+              &--default {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      &__text {
+        margin-right: 0;
+      }
+      &__icon {
+        width: 20px;
+        height: 20px;
+        &--hover {
+          display: none;
+        }
+        @include pc {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+    &__img {
+      width: 72px;
+      height: 72px;
+      margin-left: 10px;
+      border-radius: 50%;
+      overflow: hidden;
+      @include pc {
+        width: 86px;
+        height: 86px;
+      }
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__bottom {
+    position: relative;
+    height: calc(var(--vh, 1vh) * 100 - 70px);
+    overflow: auto;
+    .btn {
+      position: fixed;
+      left: 16px;
+      bottom: calc(var(--vh, 1vh) * 100 + 16px);
+      width: calc(var(--vh, 1vh) * 100 - 32px);
+      background-color: var(--05-white);
+      @include pc {
+        position: absolute;
+        width: auto;
+        left: 60px;
+        bottom: 30px;
+      }
+      &__icon {
+        width: 18px;
+        height: 18px;
+        margin-right: 3px;
+        margin-left: 0;
+        @include pc {
+          margin-right: 2px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+      &__link {
+        flex-direction: row-reverse;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        border-color: var(--grey-line-3);
+        &:disabled {
+          color: var(--grey-line-3);
+          border-color: var(--grey-line-3);
+        }
+        @include pc {
+          padding: 10px 24px;
+        }
+      }
+      &__text {
+        color: var(--grey-text);
+      }
+      &.btn--disabled {
+        .btn__link {
+          color: var(--grey-line-3);
+          border-color: var(--grey-line-3);
+        }
+      }
+    }
+  }
+  &__nav {
+    display: block;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    color: var(--30-kids-black);
+    transition: color 0.2s;
+    @include pc {
+      padding: 13px 0;
+      font-size: 28px;
+    }
+    &:hover {
+      color: var(--30-kids-black) !important;
+    }
+    &-wrap {
+      padding: 25px 32px;
+      @include pc {
+        box-sizing: border-box;
+        padding: 47px 60px;
+      }
+    }
+    &-box {
+      &:hover {
+        @media (hover: hover) and (pointer: fine) {
+          .gnb__nav {
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+
+  // NOTE: Gnb sns 바로가기
+  &:not(.s-open) .footer__sns {
+    display: none;
+  }
+  &.s-open {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: top 0.4s, opacity 0.4s, visibility 0.4s;
+    @include pc {
+      right: 0;
+      transition: right 0.5s, opacity 0.4s, visibility 0.4s;
+    }
+    > * {
+      opacity: 1;
+      transition: opacity 0.45s 0.4s;
+    }
+    .hamburger__item {
+      width: 114%;
+    }
+    .gnb__bottom {
+      .btn {
+        @include only-mobile {
+          bottom: 16px;
+        }
+      }
+      // NOTE: Gnb sns 바로가기 (디자인가이드 css 그대로 적용하여 추후 수정 필요)
+      .footer__sns {
+        .sns__item {
+          width: 60px;
+          height: 60px;
+          margin: 0 10px 0 0;
+          padding: 12px;
+          box-sizing: border-box;
+          background-color: var(--14-grey-bg-1);
+
+          img {
+            width: 30px;
+            height: 30px;
+          }
+
+          @include only-mobile {
+            width: 64px;
+            height: 64px;
+            margin: 0 16px 0 0;
+            padding: 14px;
+
+            img {
+              width: 36px;
+              height: 36px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.gnb--nologin {
+    padding-top: 70px;
+    @include pc {
+      padding-top: 120px;
+    }
+    .gnb {
+      &-user {
+        display: none;
+      }
+      &__nav {
+        @include only-mobile {
+          font-size: 22px;
+          padding: 11px 0;
+        }
+        &-wrap {
+          padding-top: 0;
+        }
+      }
+      &__bottom {
+        .btn {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @at-root .p-gnb {
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: calc(var(--vh, 1vh) * 100);
+      font-size: 20px;
+      font-weight: bold;
+      @include pc {
+        font-size: 50px;
+      }
+    }
+  }
+}

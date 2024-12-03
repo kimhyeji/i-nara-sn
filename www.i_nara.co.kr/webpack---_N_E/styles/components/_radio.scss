@@ -1,0 +1,227 @@
+.radio {
+  &__item {
+    position: relative;
+    background-color: var(--bg-checked-yellow);
+    border-radius: 12rem;
+    overflow: hidden;
+    @include pc {
+      border-radius: 16rem;
+    }
+    &:not(:last-child) {
+      margin-bottom: 12rem;
+    }
+  }
+  &__input {
+    position: absolute;
+    top: 50%;
+    left: 24rem;
+    display: block;
+    width: 20rem;
+    height: 20rem;
+    transform: translateY(-50%);
+    @include pc {
+      left: 30rem;
+      width: 24rem;
+      height: 24rem;
+    }
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      @include pc {
+        width: 24rem;
+        height: 24rem;
+      }
+    }
+    &:before {
+      background-color: var(--bg-light-grey);
+    }
+    &:after {
+      transform: scale(0.4);
+      background-color: var(--05-white);
+    }
+    &:checked {
+      &:before {
+        background-color: var(--17-darken-yellow);
+      }
+    }
+  }
+  &__label {
+    $item: &;
+    display: block;
+    width: 100%;
+    min-height: 92rem;
+    padding: 24rem;
+    background-color: var(--14-grey-bg-1);
+    box-sizing: border-box;
+    @include pc {
+      padding: 30rem;
+      min-height: 120rem;
+    }
+    &.s-checked {
+      background-color: var(--bg-checked-yellow);
+    }
+  }
+  &__title {
+    font-size: 15rem;
+    font-weight: 500;
+    line-height: 1.6;
+    @include pc {
+      font-size: 22rem;
+      line-height: 1.36;
+    }
+  }
+  &__subtitle {
+    font-size: 13rem;
+    line-height: 1.54;
+    letter-spacing: -0.3px;
+    color: var(--06-gray);
+    @include pc {
+      font-size: 18rem;
+      line-height: 1.67;
+    }
+  }
+
+  /* Type: radio */
+  &--radio {
+    .radio {
+      &__title {
+        font-size: 15rem;
+        font-weight: 500;
+        line-height: 1.6;
+        letter-spacing: -0.3px;
+        @include pc {
+          font-size: 22rem;
+          font-weight: 500;
+          line-height: 1.36;
+        }
+        &-wrap {
+          position: absolute;
+          top: 50%;
+          right: 24rem;
+          transform: translateY(-50%);
+          width: calc(100% - 80rem);
+          pointer-events: none;
+          word-break: break-all;
+          @include pc {
+            width: calc(100% - 98rem);
+          }
+        }
+      }
+    }
+  }
+
+  /* Type: img */
+  &--img {
+    .radio {
+      &__item {
+        display: flex;
+        align-items: center;
+        padding: 24rem;
+        @include pc {
+          padding: 30rem;
+        }
+      }
+      &__img {
+        margin-right: 12rem;
+        min-width: 48rem;
+        max-width: 48rem;
+        height: 48rem;
+        border-radius: 50%;
+        overflow: hidden;
+        @include pc {
+          margin-right: 20rem;
+          min-width: 72rem;
+          max-width: 72rem;
+          height: 72rem;
+        }
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &__title {
+        &-wrap {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+      &__subtitle {
+        color: var(--30-kids-black);
+      }
+    }
+  }
+
+  /* Type: coupon */
+  &--coupon {
+    .radio {
+      &__item {
+        // margin: 27rem 0;
+        margin: 26rem 0;
+        border-radius: 0;
+      }
+      &__label {
+        padding: 0;
+        min-height: 46rem;
+        @include pc {
+          min-height: 52rem;
+        }
+      }
+      &__input {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translateY(0);
+      }
+      &__title {
+        font-size: 16rem;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: -0.3px;
+        @include pc {
+          font-size: 18rem;
+          line-height: 1;
+        }
+        &-wrap {
+          position: absolute;
+          top: 0;
+          left: 32rem;
+          width: calc(100% - 32rem);
+          pointer-events: none;
+          word-break: break-all;
+          @include pc {
+            top: 2rem;
+            left: 36rem;
+          }
+        }
+      }
+      &__expiration {
+        &--title {
+          display: inline-block;
+          width: 50px;
+          @include pc {
+            width: 57px;
+          }
+        }
+        &-wrap {
+          margin-top: 5rem;
+          font-size: 13rem;
+          line-height: 1.54;
+          letter-spacing: -0.3px;
+          color: var(--06-gray);
+          @include pc {
+            margin-top: 16rem;
+            font-size: 15rem;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+}

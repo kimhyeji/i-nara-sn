@@ -1,0 +1,150 @@
+@import './abstracts/variables';
+@import './abstracts/common-variables';
+@import './abstracts/mixins';
+
+@import '@i-nara/ui/styles/reset-common';
+@import '@i-nara/ui/styles/fonts';
+
+@import './components/alert';
+@import './components/popup';
+@import './components/loading';
+@import './components/checkbox';
+@import './components/title';
+@import './components/accordion';
+@import './components/gallery';
+@import './components/share';
+@import './components/card';
+@import './components/search';
+@import './components/horizontal';
+@import './components/hover';
+@import './components/dim';
+@import './components/error';
+@import './components/banner';
+@import './components/player';
+@import './components/radio';
+@import './components/btn';
+@import './components/cert';
+
+html {
+  font-size: 1px;
+}
+body {
+  $self: &;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  color: var(--30-kids-black);
+  overscroll-behavior: contain;
+
+  &.scroll-fixed {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    touch-action: none;
+    pointer-events: none;
+  }
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  vertical-align: top;
+}
+strong {
+  font-weight: bold;
+}
+button{
+  &:disabled {
+    cursor: default;
+  }
+}
+
+/* 공통 */
+.container {
+  padding-top: 72px;
+  @include pc {
+    padding-top: 120px;
+  }
+}
+
+.l {
+  &-subpage {
+    margin-top: 32rem;
+    @include pc {
+      padding-bottom: 80rem;
+      margin-top: 72rem;
+    }
+    .l-container {
+      padding: 0 $containerSub;
+      @include pc {
+        padding: 0 $pcContainer;
+      }
+      @include pc-small {
+        padding: 0 $pcSmallContainer;
+      }
+    }
+  }
+
+  &-container {
+    padding: 0 $container;
+    min-width: $minWidth;
+    max-width: $maxWidth;
+    box-sizing: border-box;
+    @include pc {
+      padding: 0 $pcContainer;
+    }
+    @include pc-big {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include pc-small {
+      padding: 0 $pcSmallContainer;
+    }
+    &.s-round {
+      border-radius: 0 0 30px 30px;
+      margin-bottom: -32rem;
+      overflow: hidden;
+    }
+  }
+}
+
+.s {
+  &-hide {
+    visibility: hidden;
+  }
+  &-display {
+    &-pc {
+      display: none;
+      @include pc {
+        display: block;
+      }
+    }
+    &-mo {
+      display: block;
+      @include pc {
+        display: none;
+      }
+    }
+  }
+}
+
+.v-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+// @NOTE : 레이아웃 관련 스타일들을 컴포넌트 파일로 분리하였으나, import 순서 변경 시 스타일 적용 순서가 예상이 안되어 레이아웃 스타일 위치는 변경하지 않음
+@import './layout/header';
+@import './layout/hamburger';
+@import './layout/gnb';
+@import './layout/footer';
+@import './layout/custom-scrollbar';
+@import './layout/bg-color';

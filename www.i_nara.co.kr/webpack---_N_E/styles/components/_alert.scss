@@ -1,0 +1,53 @@
+.alert{
+  display: flex;
+  align-items: center;
+  &-content {
+    width: 320rem;
+    margin: 0 auto;
+    padding: 32rem 30rem 26rem;
+    background: #fff;
+    border-radius: 40rem;
+    box-shadow: 0 4rem 8rem 0 rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    @include tablet {
+      width: 540rem;
+      padding: 52rem 30rem 39rem;
+    }
+
+    .text {
+      margin-bottom: 18rem;
+      color: #666;
+      font-size: 16rem;
+      text-align: center;
+      letter-spacing: -0.3px;
+      @include tablet {
+        font-size: 20rem;
+        margin-bottom: 32rem;
+      }
+    }
+
+    .btn {
+      width: 120rem !important;
+      &--normal {
+        .btn {
+          &__link {
+            padding: 9rem 0;
+            font-size: 13rem;
+            @include tablet {
+              padding: 17rem 0 19rem;
+              font-size: 20rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-large-content {
+    width: 360rem;
+    @include tablet {
+      width: 540rem;
+      padding: 52rem 30rem 39rem;
+    }
+  }
+}

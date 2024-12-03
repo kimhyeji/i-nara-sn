@@ -1,0 +1,118 @@
+.gallery {
+  @include pc {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding-left: 10.5rem;
+    padding-right: 10.5rem;
+    box-sizing: border-box;
+  }
+  &:not(:last-child) {
+    margin-bottom: 20rem;
+  }
+  &-wrap {
+    @include pc {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -10.5rem;
+      margin-left: -10.5rem;
+    }
+  }
+  &__item {
+    display: block;
+    font-size: 0;
+    border-radius: 30rem;
+    overflow: hidden;
+    @include pc {
+      &:hover {
+        transform: translate(-10px, -10px);
+        box-shadow: 10px 10px 8px 0 rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease;
+      }
+    }
+    @include pc {
+      border-radius: 30rem 30rem 40rem 40rem;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    object-fit: cover;
+    &-wrap {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 75%;
+        @include pc {
+          padding-top: 75.145%;
+        }
+      }
+    }
+  }
+  &__title {
+    font-size: 18rem;
+    font-weight: bold;
+    line-height: 1.44;
+    letter-spacing: -0.3px;
+    word-break: keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    @include pc {
+      min-height: 60rem;
+      font-size: 20rem;
+      line-height: 1.5;
+    }
+    &-wrap {
+      padding: 20rem 24rem 24rem;
+      background-color: var(--05-white);
+      margin-top: -1rem;
+      @include pc {
+        padding: 20rem 36rem 28rem 28rem;
+      }
+      &.bg-color {
+        .gallery {
+          &__title,
+          &__date {
+            color: var(--05-white);
+          }
+          &__date {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+  &__icon {
+    position: absolute;
+    right: 18rem;
+    top: 18rem;
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    @include pc {
+      right: 20rem;
+      top: 20rem;
+    }
+  }
+  &__date {
+    margin-top: 12rem;
+    font-size: 13rem;
+    color: var(--18-grey-text);
+    @include pc {
+      margin-top: 12rem;
+      font-size: 16rem;
+      font-weight: 500;
+      color: var(--18-grey-text);
+    }
+  }
+}

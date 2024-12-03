@@ -1,0 +1,35 @@
+#cert-modal {
+  .pass {
+    iframe {
+      max-height: 560px;
+      &.has-tab {
+        max-height: 500px;
+      }
+    }
+  }
+
+  iframe {
+    max-height: 620px;
+    &.has-tab {
+      max-height: 550px;
+    }
+
+  }
+
+  @media (max-width: calc($tabletMaxWidth - 1px)), (max-height: 800px){
+    height: calc(100% - 40px);
+    width: 100%;
+    border-radius: 0;
+    padding-bottom: 40px;
+  }
+
+  @media (orientation: portrait) {
+    iframe {
+      max-height: 100% !important;
+
+      &.has-tab {
+        max-height: 100% !important;
+      }
+    }
+  }
+}

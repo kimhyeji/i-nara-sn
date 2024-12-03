@@ -1,0 +1,151 @@
+@font-face {
+  font-family: 'Sandoll LGU+ GothicNeoR Bold';
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/SDGothicNeoRound-ExtraBold.woff2')
+      format('woff2'),
+    url('https://assets.i-nara.co.kr/fonts/SDGothicNeoRound-ExtraBold.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'Sandoll LGU+ GothicNeoR Medium';
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/SDGothicNeoRound-Medium.woff2')
+      format('woff2'),
+    url('https://assets.i-nara.co.kr/fonts/SDGothicNeoRound-Medium.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'iSangsang';
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/iSangsang.otf') format('opentype'),
+    url('https://assets.i-nara.co.kr/fonts/iSangsang.woff2') format('woff2'),
+    url('https://assets.i-nara.co.kr/fonts/iSangsang.woff') format('woff'),
+    url('https://assets.i-nara.co.kr/fonts/iSangsang.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 100;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/NotoSansKR-Thin.woff2')
+    format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/NotoSansKR-Light.woff2')
+    format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/NotoSansKR-Regular.woff2')
+    format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/NotoSansKR-Medium.woff2')
+    format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/NotoSansKR-Bold.woff2')
+    format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 900;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/NotoSansKR-Black.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/Inter-Regular.woff2')
+      format('woff2'),
+    url('https://assets.i-nara.co.kr/fonts/Inter-Regular.woff') format('woff'),
+    url('https://assets.i-nara.co.kr/fonts/Inter-Regular.ttf')
+      format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/Inter-SemiBold.woff2')
+      format('woff2'),
+    url('https://assets.i-nara.co.kr/fonts/Inter-SemiBold.woff') format('woff'),
+    url('https://assets.i-nara.co.kr/fonts/Inter-SemiBold.ttf')
+      format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/Inter-Bold.woff2') format('woff2'),
+    url('https://assets.i-nara.co.kr/fonts/Inter-Bold.woff') format('woff'),
+    url('https://assets.i-nara.co.kr/fonts/Inter-Bold.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 100;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/SpoqaHanSansNeo-Thin.woff2')
+      format('woff2'),
+    url('https://assets.i-nara.co.kr/fonts/SpoqaHanSansNeo-Thin.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/SpoqaHanSansNeo-Light.woff2')
+      format('woff2'),
+    url('https://assets.i-nara.co.kr/fonts/SpoqaHanSansNeo-Light.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/SpoqaHanSansNeo-Regular.woff2')
+      format('woff2'),
+    url('https://assets.i-nara.co.kr/fonts/SpoqaHanSansNeo-Regular.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/SpoqaHanSansNeo-Medium.woff2')
+      format('woff2'),
+    url('https://assets.i-nara.co.kr/fonts/SpoqaHanSansNeo-Medium.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://assets.i-nara.co.kr/fonts/SpoqaHanSansNeo-Bold.woff2')
+      format('woff2'),
+    url('https://assets.i-nara.co.kr/fonts/SpoqaHanSansNeo-Bold.woff')
+      format('woff');
+}

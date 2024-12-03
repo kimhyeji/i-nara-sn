@@ -1,0 +1,214 @@
+.header {
+  $self: &;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  transition: transform 0.35s ease, visibility 0.35s ease;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    padding: 16px 16px 16px 12px;
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 100vw;
+
+    @include pc {
+      height: 120px;
+      padding: 24px 60px 25px;
+    }
+    &.isMain {
+      box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .p-terms {
+      #{$self}__inner {
+        padding: 16px 16px 16px 20px;
+        @include pc {
+          padding: 24px 60px 25px;
+        }
+        @include min-main-height {
+          height: 88px;
+          padding: 16px 60px;
+        }
+      }
+      @include min-main-height {
+        #{$self} {
+          .hamburger {
+            top: 22px;
+          }
+        }
+      }
+      #{$self}__logo {
+        &-wrap {
+          @include min-main-height {
+            width: 117px;
+            height: 56px;
+          }
+        }
+      }
+    }
+  }
+  &__logo {
+    display: block;
+    &--dark {
+      display: none;
+    }
+    &--color {
+      display: none;
+    }
+    &-wrap {
+      width: 84px;
+      height: 40px;
+      img {
+        height: 100%;
+      }
+      @include pc {
+        width: 150px;
+        height: 72px;
+      }
+    }
+    &--pc {
+      display: none;
+      position: relative;
+      height: 100%;
+      @include pc {
+        display: block;
+      }
+    }
+    &--m {
+      display: block;
+      position: relative;
+      height: 100%;
+      @include pc {
+        display: none;
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    .btn--small .btn__link {
+      padding: 3.5px 10.2px 4.5px;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: normal;
+      letter-spacing: -0.3px;
+      border-radius: 15px;
+      transition: background-color 0.3s;
+      white-space: nowrap;
+      &:hover {
+        .h-s--color & {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+      }
+      @include pc {
+        padding: 10px 24px;
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: normal;
+        border-radius: 25px;
+        border-width: 2px;
+      }
+    }
+  }
+  @at-root .h-s--dark {
+    #{$self} {
+      &__inner {
+        background-color: transparent !important;
+        box-shadow: none;
+      }
+      &__back {
+        &-text {
+          color: #fff;
+        }
+        &--black {
+          display: none;
+        }
+        &--white {
+          display: block;
+        }
+      }
+      &__logo {
+        display: none;
+        &--dark {
+          display: block;
+        }
+        &--color {
+          display: none;
+        }
+      }
+      &__right {
+        .btn--small {
+          .btn__link {
+            color: var(--05-white);
+            border-color: rgba(255, 255, 255, 0.6);
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: rgba(255, 255, 255, 0.3);
+            }
+            &:disabled {
+              .btn__text {
+                opacity: 0.7;
+              }
+            }
+          }
+          &.btn--disabled {
+            .btn__text {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+      .hamburger {
+        &__item {
+          background-color: var(--05-white);
+        }
+      }
+    }
+  }
+  @at-root .h-s--color {
+    #{$self} {
+      &__inner {
+        background-color: transparent;
+      }
+      &__logo {
+        display: none;
+        &--dark {
+          display: none;
+        }
+        &--color {
+          display: block;
+        }
+      }
+      .hamburger {
+        &__item {
+          background-color: var(--30-kids-black);
+        }
+      }
+    }
+  }
+  @at-root .h-s--white {
+    #{$self} {
+      &__inner {
+        background-color: #fff;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  @at-root .h--hide {
+    #{$self} {
+      display: none;
+    }
+  }
+  &.s-hide {
+    transform: translateY(-100%);
+  }
+  &.s-open {
+    transform: translateY(0%);
+  }
+}

@@ -1,0 +1,22 @@
+.hover{
+  &__line {
+    @include pc {
+      background-image: linear-gradient(
+          180deg,
+          transparent calc(100% - 1px),
+          #221e1a 0
+      );
+      background-size: 0 96%;
+      background-repeat: no-repeat;
+    }
+
+    &-wrap:hover {
+      .hover__line {
+        @include pc {
+          background-size: 100% 96%;
+          transition: background-size 0.3s ease;
+        }
+      }
+    }
+  }
+}
